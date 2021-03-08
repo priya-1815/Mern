@@ -89,7 +89,6 @@ section .num{
     border-radius: 50%;
     height: 35vh;
     width: 100%;
-    /*margin: 5px auto auto auto;*/
   }
   .num .card figure figcaption{
     text-align: center;
@@ -186,11 +185,6 @@ section .num{
       width: 250px;
     }
     .num .card figure img{
-      /*position: relative;
-      border-radius: 50%;
-      height:30vh;
-      width: 100%;
-      /~margin: 5px auto auto auto;~/*/
       object-fit: fill;
     }
   }
@@ -248,7 +242,6 @@ footer a{
         flex-direction: column;
         justify-content:space-around;
         text-align: center;
-        /* flex-wrap: wrap; */
         font-size: 22px;
         width: 100%;
         height: 20vh;
