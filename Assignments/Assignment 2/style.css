@@ -1,0 +1,255 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: 'Crimson Text', serif;
+}
+nav{
+    background-color: #003249;
+    display: flex;
+    justify-content: center;
+    min-height: 70px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+nav .navItems a:hover{
+    color: #54d2e9;
+}
+nav .navItems li a, nav .navItems h1 a{
+    text-decoration: none;
+    color: white;
+    /*border: 1px solid chartreuse;*/
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 25px;
+    width: 100%;
+    margin: auto;
+}/*
+nav ul li{
+    border: 1px solid red;
+}*/
+.mainHeading{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #00296b;
+    font-style: italic;
+}
+.mainImage{
+    border-radius:0 0 5% 5% ;
+    width: 100%;
+    height: 100vh;
+    margin-top: 70px;
+    margin-bottom: 40px;
+    /* opacity: 0.5; */
+}
+.card figcaption{
+    font-size: 22px;
+}
+.card .back p h1{
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+section{
+    margin-top: 30px;
+}
+@media screen and (max-width:600px){
+    .mainImage{
+        margin-top: 125px;
+    }
+    nav,ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    .mainImage{
+        width: 100%;
+        height: 70vh;
+        margin-top:77px;
+    }
+}
+section .num{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+  
+    /* border: 1px solid chocolate; */
+  }
+  .num .card figure{
+    margin: 5px;
+  }
+  .num .card figure img{
+    position: relative;
+    border-radius: 50%;
+    height: 35vh;
+    width: 100%;
+    /*margin: 5px auto auto auto;*/
+  }
+  .num .card figure figcaption{
+    text-align: center;
+  }
+  .num .card div{
+    border-radius: 50%;
+  }
+  .back{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .card{
+    height: 275px;
+    width: 275px;
+    position: relative;
+    /* border:2px solid black; */
+    transition: all, 5s;
+    transform-style: preserve-3d;
+  }
+  .front, .back{
+    height: 275px;
+    width: 275px;
+    position: absolute;
+    backface-visibility: hidden;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+  } 
+  .front{
+    z-index: 1;
+  } 
+  .back{
+    transform: rotateY(180deg);
+  }
+  section{
+    perspective: 800px;
+  }
+  section div{
+    transition: 1s;
+    transform-style: preserve-3d;
+  }
+  .card:hover{
+    transform: rotateY(180deg);
+    transition: all 3.5s;
+    transform-style: preserve-3d;
+  }
+  @media screen and (min-width:400px) and (max-width:600px){
+    .mainImage{
+        margin-top: 125px;
+    }
+}
+  @media screen and (max-width:400px){
+    .mainImage{
+        margin-top: 125px;
+        width: 100%;
+    }
+    .mainHeading{
+        text-align: center;
+        font-size: medium;
+    }
+      section{
+        display: flex;
+        align-items: center;
+      }
+    section .num{
+      width: 100vw;
+      height: 100%;
+    }
+    section .card .front .back{
+      height: 200px;
+      width: 200px;
+    }
+    .card:hover{
+      transform: rotateY(180deg);
+      transition: all, 3.5s;
+      transform-style: preserve-3d;
+    }
+  }
+  @media screen and (max-width:640px){
+      section{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+      }
+    section .num{
+      width: 100%;
+      height: 100%;
+      /* border: 5px solid chocolate; */
+    }
+    section .card .front{
+      height: 250px;
+      width: 250px;
+    }
+    .num .card figure img{
+      /*position: relative;
+      border-radius: 50%;
+      height:30vh;
+      width: 100%;
+      /~margin: 5px auto auto auto;~/*/
+      object-fit: fill;
+    }
+  }
+footer{
+    width: 100%;
+    height: 30vh;
+    background-color: #80d6f5;
+    border: 1px solid black;
+}
+footer a{
+    text-decoration: none;
+    color: black;
+}
+.footerDiv {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-size: 22px;
+    width: 100%;
+    height: 20vh;
+}
+.footerDiv div{
+    margin-top: 50px;
+}
+.ficon p{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+@media screen and (max-width:1100px) and (min-width:914px){
+    footer{
+        width: 100%;
+        height: 30vh;
+        margin-top: 250px;
+    }
+}
+@media screen and (min-width:640px) and (max-width:913px){
+    footer{
+        width: 100%;
+        height: 30vh;
+        margin-top: 550px;
+    }
+}
+@media screen and (max-width:640px){
+    footer{
+        width: 100%;
+        height: 600px;
+        margin-top: ;
+    }
+    .footerDiv div{
+        margin-top: 40px;
+    }
+    .footerDiv .footerContent{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        text-align: center;
+        /* flex-wrap: wrap; */
+        font-size: 22px;
+        width: 100%;
+        height: 20vh;
+}
